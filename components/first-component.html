@@ -1,0 +1,29 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="../bower_components/paper-input/paper-input.html">
+
+<dom-module id="first-component">
+
+	<style>
+		h1,p {
+			text-align: center;
+		}
+	</style>	
+	<template>
+		<h1>{{titulo}}</h1>
+		<p>Primer ejemplo con Polymer</p>
+		<paper-input label="Cambia el Titular" value="{{titulo}}"></paper-input>
+	</template>
+
+</dom-module>
+
+<script>
+	Polymer({
+		is:"first-component",
+		properties: {
+			titulo: {
+				type: String,
+				value: "Hola Caracola"
+			}
+		}
+	});
+</script>
